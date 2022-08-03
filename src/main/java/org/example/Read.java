@@ -1,18 +1,24 @@
 package org.example;
 
-import javax.persistence.Persistence;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
+import org.example.models.Capital;
+import org.example.models.Country;
 
-public class Main {
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class Read {
+
     public static void main(String[] args) {
+
         // create EntityManager
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("example");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-        // access transaction object
-        EntityTransaction transaction = entityManager.getTransaction();
+        // get records
+        Country country1 = entityManager.find(Country.class, 1);
+        Capital capital1 = country1.getCapital();
+        System.out.println(capital1);
 
         // close entity manager
         entityManager.close();
