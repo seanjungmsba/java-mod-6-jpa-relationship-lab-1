@@ -10,7 +10,6 @@ public class Capital {
     @GeneratedValue
     private int id;
 
-    @Id
     private String name;
 
     private boolean isMetropolitan;

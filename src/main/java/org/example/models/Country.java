@@ -10,7 +10,6 @@ public class Country {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Id
     private String name;
 
     @OneToOne

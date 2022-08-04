@@ -16,9 +16,9 @@ public class Read {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         // get records
-        Country country1 = entityManager.find(Country.class, 1);
-        Capital capital1 = country1.getCapital();
-        System.out.println(capital1);
+        Country country = entityManager.find(Country.class, 1);
+        Capital capital = country.getCapital();
+        System.out.println(capital.toString());
 
         // close entity manager
         entityManager.close();

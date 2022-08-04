@@ -20,9 +20,11 @@ public class Create {
 
         // create capital instances
         Capital capital1 = new Capital();
+        capital1.setName("Tokyo");
         capital1.setMetropolitan(true);
 
         Capital capital2 = new Capital();
+        capital2.setName("Paris");
         capital2.setMetropolitan(true);
 
         // create country-capital associations
